@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>domain</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+    .container{
+        background-color: aliceblue;
+        margin: 20px 300px 100px 300px;
+        padding: 50px;
+        border-radius: 10px;
+        /* justify-content: center;
+        display: flex;
+        align-items: center; */
+    }
+    /* #block{
+        height: 30px;
+        width: 300px;
+
+    } */
+    .label{
+        height: 50px;
+        width: 300px;
+    }
+    .circle-cont{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        height: 100px;       
+        
+        
+        /* display: flex;
+        align-items: center; */
+         
+        /* justify-content: space-around;
+        border: 1px solid black;     */
+    }
+    .circle{
+        height: 50px;
+        width: 50px; 
+        border-radius: 50%;   
+        background-color: red;
+        margin: 0 5px;
+    }
+    .square-cont{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        /* height: 100px; */
+    }
+    .sq{
+        /* height: 50px; */
+        /* width: 70px; */
+        border-radius: 20%;
+        background-color: green;
+        margin: 0 5px;
+        text-decoration: none;
+        display: flex;
+        text-align: center;
+        padding: 20px;
+
+    }
+    #red{
+        background-color: red;
+        /* height: 100px;
+        width: 100px; 
+        border-radius: 50%; */
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    #green{
+        background-color: green;
+    }
+    #blue{
+        background-color: blue;
+    }
+    #black{
+        background-color: black;
+    } 
+    /* #+{
+        width: 70px;
+
+    } */
+
+</style>
+<body>
+    <div class="container">
+        <h2>Select Your Domain</h2>
+        <!-- <div class="dropdown">
+            <div class="dropbtn"></div>
+            <div class="dropbtn"></div>
+            <div class="dropbtn"></div>
+            <div class="dropbtn"></div>
+        </div> -->
+        <!-- <label for="City" id="block"></label> -->
+        <select id="block">
+        <option value="">--Make A choice--</option>
+        <option value="" id="React">React</option>
+        <option value="" id="Django">Django</option>
+        <option value="" id="Angular">Angular</option>
+        <option value="" id="AWS">AWS</option>
+        </select>
+        <p id="info"></p>
+        <br>
+        <div class="circle-cont">
+            <div class="circle" id="red" ></div>
+            <div class="circle" id="yellow"></div>
+            <div class="circle" id="green"></div>
+            <div class="circle" id="blue"></div>
+            <div class="circle" id="black"></div>
+        </div>
+         <div class="square-cont">
+            <div class="sq" id="upper">upper</div>
+            <div class="sq" id="lower">lower</div>
+            <div class="sq" id="+">+</div>
+            <div class="sq" id="-">-</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("select").onclick =  function(){
+            let val = document.querySelector("select").value;
+            if (val=="React"){
+                document.querySelector("p").innerText = "React is a popular JavaScript library for building user interfaces, particularly single-page applications where responsive, dynamic, and interactive components are essential. Developed by Facebook, it uses a virtual DOM to efficiently update and render components, enabling fast and smooth user experiences. React promotes reusable components and follows a declarative approach, making UI development more predictable and easier to debug."
+            }
+        }
+        // else if 
+
+        // else{
+        //     document.querySelector("p").innerText=''
+        // }
+    </script>
+
+</body>
+</html>

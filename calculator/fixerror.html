@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<style>
+    table {
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        padding: 20px 40px;
+        background-color: blue;
+        color: rgb(214, 162, 162);
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+    }
+
+    input[type="text"] {
+        padding: 20px 30px;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+
+    <!-- Create table -->
+    <table id="calcu">
+        <tr>
+            <td colspan="2">
+                <input type="text" id="result">
+            </td>
+            <td><input type="button" value="AC"></td>
+            <td><input type="button" value="DEL"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="1"></td>
+            <td><input type="button" value="2"></td>
+            <td><input type="button" value="3"></td>
+            <td><input type="button" value="/"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4"></td>
+            <td><input type="button" value="5"></td>
+            <td><input type="button" value="6"></td>
+            <td><input type="button" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7"></td>
+            <td><input type="button" value="8"></td>
+            <td><input type="button" value="9"></td>
+            <td><input type="button" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0"></td>
+            <td><input type="button" value="."></td>
+            <td><input type="button" value="="></td>
+            <td><input type="button" value="+"></td>
+        </tr>
+    </table>
+
+    <script>
+        let btn = document.querySelectorAll("input");
+        btn.forEach((item) => {
+            item.onclick = function () {
+                console.log(this.value);
+                // if you remove .value, you'll get the entire description of the key pressed
+                // item.innerText doesn't work for input elements
+                console.log(item.value);
+            };
+        });
+
+        for (let i of btn) {
+            console.log(i.value);
+            if (i.value == '=') {
+                i.onclick = function () {
+                    let val = document.querySelector('#result').value;
+                    console.log(val);
+                    let ans = eval(val);
+                    console.log(ans);
+                    document.querySelector('#result').value = ans;
+                }
+            } else if (i.value == 'AC') {
+                i.onclick = function () {
+                    document.querySelector('#result').value = '';
+                }
+            } else if(i.value == 'DEL'){
+                i.onclick = function () {
+                    // document.querySelector('#result').value = 
+                    let val = document.querySelector('#result').value;
+                    let newval = '';
+                    // let point = val.length;
+                    for(let i = 0; i<val.length -1 ; i++){
+                        newval += val[i];
+                    }
+                    document.querySelector('#result').value = newval;
+                }
+            }
+            
+            else {
+                i.onclick = function () {
+                    document.querySelector("#result").value += i.value;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

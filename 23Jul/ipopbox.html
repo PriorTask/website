@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input-output box</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        height: 100vh;
+        width: 100vw;
+
+
+    }
+    #box_1{
+        height: 50%;
+        width: 50%;
+        border: 1px solid black;    
+
+    }
+    #box_2{
+        height: 50%;
+        width: 50%;
+        border: 1px solid black; 
+
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <input type="text" class="box_1" id="box_1">
+        <!-- <input type="text" class="box_2" id="box_2"> -->
+         <!-- <div class="box_1" id="box_1"></div> -->
+         <div class="box_2" id="box_2"></div>
+        
+    </div>
+    <script>
+        // document.getElementById(box_1).oninput(){
+        //     let value=document.getElementById('box_2').value;
+        //     // console.log(text);
+        //     document.getElementById('box_2').value = value;
+        // }
+        document.getElementById('box_1').oninput = function() {
+            let value = document.getElementById('box_1').value;
+            // document.getElementById('box_2').value = value;
+            // document.getElementById('box_2').textContent = value
+            document.getElementById('box_2').innerHTML=`<h1>${value}</h1>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #value{
+        height: 50px;
+        width: 50px;
+    }
+</style>
+<body id="body">
+   <div class="content">
+    <p id="point">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates tempore mollitia, accusantium nobis aliquam reiciendis aut quod, velit, ipsa nesciunt distinctio id quidem? Deleniti dolore ullam eos vero accusamus nihil sunt, odio ipsa quidem deserunt maiores ad nobis hic expedita, similique ducimus illum ipsum voluptatibus provident aspernatur suscipit! Saepe rerum eligendi, ex obcaecati praesentium modi? Deserunt, eligendi voluptatem.</p>
+
+   </div>
+   <button class="lowercase" id="lower">lowercase</button>
+   <button class="uppercase" id="upper">uppercase</button>
+   <button class="increment" id="inc">increment</button>
+   <button class="decrement" id="dec">decrement</button>
+   <input type="color" class="value" id="color">
+   <input type="range" class="range" id="range">
+   <script>
+    let count=20;
+    document.getElementById('upper').onclick = function(){
+        document.getElementById('point').style.textTransform="uppercase";
+    }
+    document.getElementById('lower').onclick = function(){
+        document.getElementById('point').style.textTransform="lowercase";
+    }
+    // document.getElementById('inc').onclick=function(){
+    //     let currentSize = window.getComputedStyle(document.getElementById('point')).fontSize;
+    //     let newSize = parseFloat(currentSize) + 2;
+    //     document.getElementById('point').style.fontSize = newSize + 'px';
+    // }
+    // document.getElemetnById('dec').onclick=function(){
+    //     let currentSize = window.getComputedStyle(document.getElementById('point')).fontSize;
+    //     let newSize = parseFloat(currentSize) - 2;
+    //     document.getElementById('point').style.fontSize = newSize + 'px';
+    // }
+    document.getElementById('inc').onclick = function(){
+        count++;
+        document.getElementById('point').style.fontSize = count + "px";
+    }
+    document.getElementById('dec').onclick = function(){
+        count--;
+        document.getElementById('point').style.fontSize = count + "px";
+    }
+    document.getElementById('color').oninput=function(){
+        let color=document.getElementById('color').value;
+        console.log(color);
+        document.getElementById('point').style.backgroundColor = color;
+    }
+    document.getElementById('range').oninput=function(){
+        let tick=document.getElementById('range').value;
+        document.getElementById('point').style.fontSize = tick + "px";
+    }
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .color{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #red{
+        background-color: red;
+    }
+    #green{
+        background-color: green;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    #pink{
+        background-color: pink;
+    }
+
+
+
+</style>
+<body id="pi">
+    <!-- <button id="button">submit</button>
+    <br><br><br><br> -->
+<div class="container">
+    <div class="color" id="red"></div>
+    <div class="color" id="green"></div>
+    <div class="color" id="yellow"></div>
+    <div class="color" id="pink"></div>
+</div>
+<!-- <script>
+    document.getElementById('button').onclick = function(){
+    console.log("Hello world")
+}
+</script> -->
+<script>
+    document.getElementById('red').onclick = function(){
+        document.getElementById('pi').style.backgroundColor='red';
+    }
+    document.getElementById('green').onclick = function(){
+        document.getElementById('pi').style.backgroundColor='green';
+    }
+    document.getElementById('yellow').onclick = function(){
+        document.getElementById('pi').style.backgroundColor='yellow';
+    }
+    document.getElementById('pink').onclick = function(){
+        document.getElementById('pi').style.backgroundColor='pink';
+    }
+</script>
+</body>
+</html>

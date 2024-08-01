@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rgbclr&nogen</title>
+</head>
+<body>
+    <input type="text" disabled id="result">
+    <button id="btn">Generate</button>
+    <!-- <script>
+        document.querySelector("#btn").onclick = function(){
+            let val = document.querySelector('#result').value;
+            // let arr = '';
+            for(let i=0;i<=val.length;i++){
+            document.querySelector('input').value += Math.floor(Math.random()*255);
+            }
+        }
+        document.querySelector("btn").oneclick=function(){
+            let color = `$(Math)
+        }
+    </script> -->
+    <script>
+        // document.querySelector("#btn").onclick= function(){
+        //     let color =`${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}`;
+        //     document.querySelector("input").value=color;
+        //     document.body.style.backgroundColor= `rgb(${color})`
+
+        // }
+        setInterval(()=>{
+            let color =`${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}`;
+            document.querySelector("input").value=color;
+            // document.querySelector("input").style.backgroundColor = `rgb(${color})`;
+            document.body.style.backgroundColor= `rgb(${color})`}, 1000)
+
+        
+    </script>
+</body>
+</html>

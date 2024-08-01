@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetOutputInConsole</title>
+</head>
+<body>
+ <input type="text" id="username" name="info" placeholder="Enter your name"><br>
+    <input type="text" id="userid" name="info" placeholder="Enter email id"><br>
+    <input type="number" id="age" name="info" placeholder="Enter age"><br>
+    <input type="number" id="phno" name="info" placeholder="Enter phone number"><br>
+    <button class="button" id="btn">Submit</button>
+    
+
+    <script>
+        // document.getElementById('btn').onclick=function(){
+        //     let val = document.getElementById('username').value;
+        //     document.getElementById('username').value='';
+        //     document.getElementById('username').focus();
+        //     console.log(val);
+        // }
+        // document.getElementById('btn').onclick=function(){
+        //     let val = document.getElementById('userid').value;
+        //     document.getElementById('userid').value='';
+        //     document.getElementById('userid').focus();
+        //     console.log(val);
+        // }
+        // document.getElementById('btn').onclick=function(){
+        //     let val = document.getElementById('age').value;
+        //     document.getElementById('age').value='';
+        //     document.getElementById('age').focus();
+        //     console.log(val);
+        // }
+        // document.getElementById('btn').onclick=function(){
+        //     let val = document.getElementById('phno').value;
+        //     document.getElementById('phno').value='';
+        //     document.getElementById('phno').focus();
+        //     console.log(val);
+        // }
+         
+
+        // --------Method-1---------------
+        // document.getElementById('btn').onclick = function(){
+        //     let val = document.getElementsByClassName=('info');
+        //     console.log(val);
+        //     for(let i=0; i<val.length; i++)
+        //     console.log(val[i].value);
+        // }
+
+        
+        // ------------Method-2--------------
+        // document.getElementById('btn').onclick = function() {
+        //     let inputs = document.getElementsByName('info');
+        //     for (let i = 0; i < inputs.length; i++) {
+        //         console.log(inputs[i].value);
+        //         inputs[i].value = '';
+        //     }
+        //     if (inputs.length > 0) {
+        //         inputs[0].focus();
+        //     }
+        // }
+
+
+        // -----------Method-3---------------
+        document.querySelector("button").onclick = function(){
+            let a = document.querySelectorAll('input')
+            for(let i of a)
+            console.log(i.value)
+        }
+
+
+        // --------------Method-4-----------
+        // document.querySelector('.button').onclick = function(){
+        //     let a = document.querySelector()
+        //     for(let i of a)
+        //     console.log(i.value)
+        // }
+
+        
+    </script>
+</body>
+</html>
